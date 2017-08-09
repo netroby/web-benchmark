@@ -30,3 +30,23 @@ Requests/sec:  22298.28
 Transfer/sec:      2.62MB
 
 ```
+## ASP .net core self contained build
+
+```
+$ wrk -t12 -c400 -d30s http://127.0.0.1:5000               
+Running 30s test @ http://127.0.0.1:5000
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    17.79ms   17.43ms 273.90ms   82.50%
+    Req/Sec     2.19k   613.12     6.38k    74.39%
+  784136 requests in 30.10s, 91.98MB read
+Requests/sec:  26054.21
+Transfer/sec:      3.06MB
+
+```
+
+To build self contained 
+```
+dotnet publish -f netcoreapp2.0 -r centos.7-x64 --self-contained
+
+```
