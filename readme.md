@@ -1,5 +1,19 @@
 # web benchmark result
 
+## Nginx + php with fpm mode
+
+```
+$ wrk -t12 -c400 -d30s http://local.domain.com/test.php
+Running 30s test @ http://local.domain.com/test.php
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   105.36ms   91.64ms   1.16s    97.57%
+    Req/Sec   347.90     53.60     1.82k    87.00%
+  123756 requests in 30.10s, 26.31MB read
+Requests/sec:   4112.00
+Transfer/sec:      0.87MB
+
+```
 
 ## ASP .net core
 
