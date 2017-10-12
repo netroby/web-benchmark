@@ -50,3 +50,18 @@ To build self contained
 dotnet publish -f netcoreapp2.0 -r centos.7-x64 --self-contained
 
 ```
+
+## vert.x + kotlin example
+
+```
+$ wrk -t12 -c400 -d30s http://127.0.0.1:8080
+Running 30s test @ http://127.0.0.1:8080
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.47ms    2.33ms 220.09ms   98.18%
+    Req/Sec     9.75k     1.55k   59.36k    96.70%
+  3474947 requests in 30.10s, 172.33MB read
+Requests/sec: 115448.83
+Transfer/sec:      5.73MB
+
+```
