@@ -65,3 +65,20 @@ Requests/sec: 115448.83
 Transfer/sec:      5.73MB
 
 ```
+
+## playframework + scala
+
+```
+ $ wrk -t12 -c400 -d30s http://127.0.0.1:9000
+Running 30s test @ http://127.0.0.1:9000
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    19.81ms   64.62ms   1.96s    99.16%
+    Req/Sec     1.96k   763.34     4.57k    70.56%
+  499635 requests in 30.09s, 1.18GB read
+  Socket errors: connect 0, read 30, write 0, timeout 341
+  Non-2xx or 3xx responses: 499635
+Requests/sec:  16604.31
+Transfer/sec:     40.05MB
+
+```
