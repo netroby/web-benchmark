@@ -114,3 +114,18 @@ Requests/sec:   2634.83
 Transfer/sec:    327.19KB
 
 ```
+
+## golang simple httpd
+
+```
+Running 30s test @ http://127.0.0.1:8001
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    18.44ms   29.19ms 480.28ms   88.22%
+    Req/Sec     4.52k     2.59k   16.84k    71.61%
+  1621767 requests in 30.09s, 303.14MB read
+  Non-2xx or 3xx responses: 223
+Requests/sec:  53891.72
+Transfer/sec:     10.07MB
+
+```
