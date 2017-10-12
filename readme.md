@@ -82,3 +82,19 @@ Requests/sec:  16604.31
 Transfer/sec:     40.05MB
 
 ```
+
+## python2.7 flask gunicorn
+
+```
+$ wrk -t12 -c400 -d30s http://127.0.0.1:8000
+Running 30s test @ http://127.0.0.1:8000
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    28.49ms   63.57ms   1.69s    98.57%
+    Req/Sec   569.18    354.72     1.59k    63.86%
+  173276 requests in 30.10s, 28.59MB read
+  Socket errors: connect 0, read 33, write 0, timeout 37
+Requests/sec:   5756.76
+Transfer/sec:      0.95MB
+
+```
