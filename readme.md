@@ -129,3 +129,18 @@ Requests/sec:  53891.72
 Transfer/sec:     10.07MB
 
 ```
+
+## java 9 + vertx + java + gradle + simple
+
+```
+$ wrk -t12 -c400 -d30s http://127.0.0.1:8080
+Running 30s test @ http://127.0.0.1:8080
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     4.14ms    2.42ms 216.67ms   97.07%
+    Req/Sec     8.23k     1.16k   30.34k    93.87%
+  2942656 requests in 30.10s, 159.96MB read
+Requests/sec:  97771.21
+Transfer/sec:      5.31MB
+
+```
