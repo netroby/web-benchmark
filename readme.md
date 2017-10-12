@@ -98,3 +98,19 @@ Requests/sec:   5756.76
 Transfer/sec:      0.95MB
 
 ```
+
+## python 2.7 flask gevent
+
+```
+$ wrk -t12 -c400 -d30s http://127.0.0.1:5000
+Running 30s test @ http://127.0.0.1:5000
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency   146.86ms   31.59ms 373.71ms   75.19%
+    Req/Sec   222.23     65.09   656.00     74.53%
+  79265 requests in 30.08s, 9.61MB read
+  Socket errors: connect 0, read 1, write 0, timeout 0
+Requests/sec:   2634.83
+Transfer/sec:    327.19KB
+
+```
