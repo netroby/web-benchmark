@@ -148,15 +148,14 @@ Transfer/sec:      5.31MB
 ## nginx unit + php
 
 ```
- $ wrk -t12 -c400 -d30s http://127.0.0.1:8300
-Running 30s test @ http://127.0.0.1:8300
+Running 30s test @ http://127.0.0.1:8300/test.php
   12 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency   247.60ms  220.57ms   1.82s    75.06%
-    Req/Sec   154.16     49.74   366.00     73.05%
-  54061 requests in 30.09s, 3.86GB read
-  Socket errors: connect 0, read 54071, write 0, timeout 0
-Requests/sec:   1796.39
-Transfer/sec:    131.32MB
+    Latency    30.56ms   68.14ms   1.15s    97.17%
+    Req/Sec   394.31    168.37     1.23k    69.92%
+  139665 requests in 30.10s, 17.32MB read
+  Socket errors: connect 0, read 139675, write 1, timeout 0
+Requests/sec:   4640.53
+Transfer/sec:    589.18KB
 
 ```
