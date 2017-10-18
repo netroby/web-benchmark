@@ -159,3 +159,18 @@ Requests/sec:   4640.53
 Transfer/sec:    589.18KB
 
 ```
+
+## nginx unit + python + django
+
+```
+$ wrk -t12 -c400 -d30s http://127.0.0.1:8080/        
+Running 30s test @ http://127.0.0.1:8080/
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    74.89ms  100.00ms   1.20s    96.65%
+    Req/Sec   424.73     98.66     0.85k    71.21%
+  150655 requests in 30.09s, 1.33GB read
+Requests/sec:   5007.25
+Transfer/sec:     45.25MB
+
+```
