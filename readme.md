@@ -98,7 +98,21 @@ Requests/sec:   5756.76
 Transfer/sec:      0.95MB
 
 ```
+## python 3.6 with sanic
 
+
+```
+huzhifeng@palm ~ $ wrk -t12 -c400 -d30s http://localhost:8000
+Running 30s test @ http://localhost:8000
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    56.04ms   10.76ms 158.80ms   86.74%
+    Req/Sec   590.65    133.09     1.00k    78.68%
+  211162 requests in 30.08s, 25.58MB read
+Requests/sec:   7019.88
+Transfer/sec:      0.85MB
+
+```
 ## python 2.7 flask gevent
 
 ```
