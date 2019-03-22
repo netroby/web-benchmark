@@ -188,3 +188,18 @@ Requests/sec:   5007.25
 Transfer/sec:     45.25MB
 
 ```
+
+## spring boot + undertow
+
+```
+$ wrk -t12 -c400 -d15s http://localhost:8080/
+Running 15s test @ http://localhost:8080/
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    10.63ms   15.06ms 360.89ms   90.00%
+    Req/Sec     4.80k     1.67k   15.77k    70.55%
+  854414 requests in 15.10s, 102.01MB read
+Requests/sec:  56594.28
+Transfer/sec:      6.76MB
+
+```
