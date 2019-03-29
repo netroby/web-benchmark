@@ -203,3 +203,18 @@ Requests/sec:  56594.28
 Transfer/sec:      6.76MB
 
 ```
+
+## Actix-web
+
+```
+$ wrk -t12 -c400 -d15s http://localhost:8080/
+Running 15s test @ http://localhost:8080/
+  12 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency    33.13ms    8.94ms 270.67ms   74.96%
+    Req/Sec     0.99k   169.83     3.65k    80.23%
+  175202 requests in 15.07s, 18.21MB read
+Requests/sec:  11622.82
+Transfer/sec:      1.21MB
+
+```
