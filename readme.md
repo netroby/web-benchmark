@@ -33,21 +33,22 @@ Transfer/sec:      2.62MB
 ## ASP .net core self contained build
 
 ```
-$ wrk -t12 -c400 -d30s http://127.0.0.1:5000               
-Running 30s test @ http://127.0.0.1:5000
-  12 threads and 400 connections
+$ wrk -t20 -c400 -d15s http://localhost:5000                                                                         
+Running 15s test @ http://localhost:5000
+  20 threads and 400 connections
   Thread Stats   Avg      Stdev     Max   +/- Stdev
-    Latency    17.79ms   17.43ms 273.90ms   82.50%
-    Req/Sec     2.19k   613.12     6.38k    74.39%
-  784136 requests in 30.10s, 91.98MB read
-Requests/sec:  26054.21
-Transfer/sec:      3.06MB
+    Latency     9.86ms   25.28ms 736.95ms   98.75%
+    Req/Sec     2.57k   368.51    12.43k    84.28%
+  769766 requests in 15.08s, 568.20MB read
+Requests/sec:  51030.69
+Transfer/sec:     37.67MB
+
 
 ```
 
 To build self contained 
 ```
-dotnet publish -f netcoreapp2.0 -r centos.7-x64 --self-contained
+dotnet publish -r linux-x64 --self-contained
 
 ```
 
