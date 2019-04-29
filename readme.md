@@ -65,6 +65,22 @@ Transfer/sec:      5.73MB
 
 ```
 
+## Nim lang + jester with release build
+
+```
+ $ wrk -t20 -c400 -d15s http://127.0.0.1:5000
+Running 15s test @ http://127.0.0.1:5000
+  20 threads and 400 connections
+  Thread Stats   Avg      Stdev     Max   +/- Stdev
+    Latency     3.35ms    3.08ms 212.11ms   99.10%
+    Req/Sec     6.12k     1.14k   25.80k    93.40%
+  1817809 requests in 15.09s, 254.84MB read
+Requests/sec: 120447.65
+Transfer/sec:     16.89MB
+
+
+```
+
 ## playframework + scala
 
 ```
