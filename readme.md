@@ -1,6 +1,6 @@
 # web benchmark result
 
-## Nginx + php with fpm mode
+## Nginx 1.15 + php 7.0 with fpm mode
 
 ```
 $ wrk -t12 -c400 -d30s http://local.domain.com/test.php
@@ -15,7 +15,7 @@ Transfer/sec:      0.87MB
 
 ```
 
-## ASP .net core
+## ASP .net core 2.*
 
 
 ```
@@ -30,7 +30,7 @@ Requests/sec:  22298.28
 Transfer/sec:      2.62MB
 
 ```
-## ASP .net core self contained build
+## ASP .net core 2.* self contained build
 
 ```
 $ wrk -t20 -c400 -d15s http://localhost:5000        
@@ -50,7 +50,7 @@ dotnet publish -c Release -r linux-x64 --self-contained
 
 ```
 
-## vert.x + kotlin example
+## vert.x 3.*  + kotlin 1.* example
 
 ```
 $ wrk -t12 -c400 -d30s http://127.0.0.1:8080
@@ -65,7 +65,7 @@ Transfer/sec:      5.73MB
 
 ```
 
-## Nim lang + jester with release build
+## Nim lang 1.0 + jester with release build
 
 ```
  $ wrk -t20 -c400 -d15s http://127.0.0.1:5000
@@ -81,7 +81,7 @@ Transfer/sec:     16.89MB
 
 ```
 
-## playframework + scala
+## playframework 2.*  + scala 2.*
 
 ```
  $ wrk -t12 -c400 -d30s http://127.0.0.1:9000
@@ -144,7 +144,7 @@ Transfer/sec:    327.19KB
 
 ```
 
-## golang simple httpd
+## golang 1.11 simple httpd
 
 ```
 Running 30s test @ http://127.0.0.1:8001
@@ -174,7 +174,7 @@ Transfer/sec:      5.31MB
 
 ```
 
-## nginx unit + php
+## nginx unit + php 7.0
 
 ```
 Running 30s test @ http://127.0.0.1:8300/test.php
@@ -189,7 +189,7 @@ Transfer/sec:    589.18KB
 
 ```
 
-## nginx unit + python + django
+## nginx unit + python 3.*  + django
 
 ```
 $ wrk -t12 -c400 -d30s http://127.0.0.1:8080/        
@@ -204,7 +204,7 @@ Transfer/sec:     45.25MB
 
 ```
 
-## spring boot + undertow
+## spring boot 1.5.* + undertow
 
 ```
 $ wrk -t12 -c400 -d15s http://localhost:8080/
