@@ -219,7 +219,7 @@ Transfer/sec:      6.76MB
 
 ```
 
-## Actix-web
+## Actix-web 1.x
 
 ```
 $ wrk -t12 -c400 -d15s http://localhost:8080/
@@ -233,3 +233,19 @@ Requests/sec:  11622.82
 Transfer/sec:      1.21MB
 
 ```
+
+## Actix-web 2.0
+
+```
+ C:\Users\huzhifeng> bombardier.exe  -c5100 -n 100000 http://localhost:8080
+Bombarding http://localhost:8080 with 100000 request(s) using 5100 connection(s)
+ 100000 / 100000 [=============================================================================================] 100.00% 31417/s 3s
+Done!
+Statistics        Avg      Stdev        Max
+  Reqs/sec     36366.02   59859.52  721275.32
+  Latency      160.20ms   143.55ms      1.77s
+  HTTP codes:
+    1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:     5.72MB/s
+  ```
