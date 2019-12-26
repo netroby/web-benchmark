@@ -218,6 +218,7 @@ Requests/sec:  56594.28
 Transfer/sec:      6.76MB
 
 ```
+# Rust
 
 ## Actix-web 1.x
 
@@ -248,4 +249,21 @@ Statistics        Avg      Stdev        Max
     1xx - 0, 2xx - 100000, 3xx - 0, 4xx - 0, 5xx - 0
     others - 0
   Throughput:     5.72MB/s
+  ```
+## Gotham 0.4.0
+
+```
+PS C:\Users\huzhifeng> bombardier.exe  -c500 -n 100000 http://localhost:7878
+Bombarding http://localhost:7878 with 100000 request(s) using 500 connection(s)
+ 100000 / 100000 [=============================================================================================] 100.00% 15565/s 6s
+Done!
+Statistics        Avg      Stdev        Max
+  Reqs/sec     20113.45   29676.62  250614.00
+  Latency       31.69ms   140.99ms      3.73s
+  HTTP codes:
+    1xx - 0, 2xx - 99962, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 38
+  Errors:
+    dial tcp [::1]:7878: connectex: No connection could be made because the target machine actively refused it. - 38
+  Throughput:     3.43MB/s
   ```
