@@ -251,6 +251,22 @@ Requests/sec:  56594.28
 Transfer/sec:      6.76MB
 
 ```
+
+## spring boot 2.2.2 + undertow
+
+```
+PS C:\Users\huzhifeng> bombardier -c 1024 -n 1000000 http://localhost:8080
+Bombarding http://localhost:8080 with 1000000 request(s) using 1024 connection(s)
+ 1000000 / 1000000 [==========================================================================================] 100.00% 26871/s 37s
+Done!
+Statistics        Avg      Stdev        Max
+  Reqs/sec     30262.49   25126.93 1002506.27
+  Latency       37.94ms    19.32ms      1.10s
+  HTTP codes:
+    1xx - 0, 2xx - 1000000, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:     5.48MB/s
+```
 # Rust
 
 ## Actix-web 1.x + debug
