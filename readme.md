@@ -159,6 +159,39 @@ Transfer/sec:     10.07MB
 
 ```
 
+## golang 1.13.5 simple httpd
+
+```
+PS C:\Users\huzhifeng> bombardier -c 1024 -n 1000000 http://localhost:8080
+Bombarding http://localhost:8080 with 1000000 request(s) using 1024 connection(s)
+ 1000000 / 1000000 [==========================================================================================] 100.00% 84860/s 11s
+Done!
+Statistics        Avg      Stdev        Max
+  Reqs/sec     86175.88   31500.73  255908.97
+  Latency       11.97ms    17.28ms      1.62s
+  HTTP codes:
+    1xx - 0, 2xx - 1000000, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 0
+  Throughput:    14.91MB/s
+```
+## golang 1.13.5 serve static file on disk
+
+```
+PS C:\Users\huzhifeng> bombardier -c 525 -n 100000 http://localhost:80
+Bombarding http://localhost:80 with 100000 request(s) using 525 connection(s)
+ 100000 / 100000 [=============================================================================================] 100.00% 12459/s 8s
+Done!
+Statistics        Avg      Stdev        Max
+  Reqs/sec     12662.04    3465.68   19151.71
+  Latency       38.50ms   169.10ms      7.65s
+  HTTP codes:
+    1xx - 0, 2xx - 99929, 3xx - 0, 4xx - 0, 5xx - 0
+    others - 71
+  Errors:
+    dial tcp [::1]:80: connectex: No connection could be made because the target machine actively refused it. - 71
+  Throughput:     3.09MB/s
+  ```
+  
 ## java 9 + vertx + java + gradle + simple
 
 ```
